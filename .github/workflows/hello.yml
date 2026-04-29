@@ -1,11 +1,11 @@
-name: Calc App Hello World
+name: Run Both Programs
 
 on:
   push:
     branches: [ main ]
 
 jobs:
-  run-app:
+  run-apps:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,3 +19,6 @@ jobs:
 
     - name: Run calc_app.py
       run: python calc_app.py
+
+    - name: Run new_program.py
+      run: python new_program.py   

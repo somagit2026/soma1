@@ -1,0 +1,21 @@
+name: Calc App Hello World
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  run-app:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Setup Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Run calc_app.py
+      run: python calc_app.py
